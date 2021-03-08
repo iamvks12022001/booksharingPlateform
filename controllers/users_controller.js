@@ -1,9 +1,24 @@
 const User=require('../models/user');// to accquire user schema
 
 module.exports.profile=function(req,res){
-res.render('profile',{
-    title: "userProfile"
-})
+    // by this profile page info only can be seen if user is sign in already
+    if(req.cookies.user_id)
+    {
+        User.findById(req.cookies.user_id,function(err,user){
+            if(user){
+                //if we find the user in DB
+               return res.render('profile',{
+                    title: "User Profile",
+                    user:user
+                });
+            }
+            //unauthorized to access
+            return res.redirect('/users/sign-in');
+        })
+        
+    }else{
+        return res.redirect('/users/sign-in');
+    }
 };
 
 //render the sign up page
