@@ -14,6 +14,8 @@ router.get('/sign-in',usersController.signIn);
 router.post('/create',usersController.create);
 //post the data to database
 
+router.post('/create-session',usersController.createSesion);
+//router to creae session
 
 module.exports=router;// to index.js of router
 
