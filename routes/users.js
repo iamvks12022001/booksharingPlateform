@@ -11,6 +11,9 @@ router.get('/profile',usersController.profile);//home method get imported from h
 router.get('/sign-up',usersController.signUp);
 router.get('/sign-in',usersController.signIn);
 
+//route for signout
+router.get('/sign-out',usersController.destroySession);
+
 router.post('/create',usersController.create);
 //post the data to database
 

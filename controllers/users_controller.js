@@ -92,7 +92,17 @@ module.exports.createSesion=function(req,res){
       }
     })
     
+   
+}
+ // for sign out  
+module.exports.destroySession=function(req,res){
+     
+    //delete the cookie 
+  
+    res.clearCookie('user_id');
     
-    
+        
+    //return back to signin page
+    return res.redirect('/users/sign-in');
 
 }
