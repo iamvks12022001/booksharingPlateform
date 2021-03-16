@@ -1,0 +1,17 @@
+<link rel="stylesheet" href="/css/signup.css">
+<link href="https://fonts.googleapis.com/css?family=Coiny" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Libre+Baskerville" rel="stylesheet">
+
+<form class="container" action="/users/addData" method="POST">
+    <h1>iCoder</h1>
+    <input type="text" name="bookname"  placeholder="Book Name " required >
+    <input type="text" name="Ownername"  placeholder="Owner Name " required >
+    <input type="text" name="about"  placeholder="Give some desc. " required >
+    <input type="text" name="roomNo"  placeholder="Room no/Address " required >
+    <input type="text" name="price"  placeholder="Price " required >
+    <input type="submit" value="Add">
+    <button  type="submit" onclick="window.location.href='./main' " style="border-radius: 20px 20px 20px 20px ; cursor: pointer; width: 20%; box-sizing: content-box; padding: 10px; font-size: medium; margin:10px; background-color: rgb(4, 0, 255); border-color: #ffd152; color:#f0f0f7">back</button>
+
+</form>
+
+<!-- //we are using post methd bcz we are sending data to server -->

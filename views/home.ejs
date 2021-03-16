@@ -1,4 +1,170 @@
 
-     
-        <h1>Codeial  / <%=title%></h1>
-        
+  <style>
+    
+    .abc{
+      margin: 0;
+      padding: 0;
+      height: 50em;
+      width: 100%;
+      background-color: #343233;
+    }
+
+    .navbar{
+      display: flex;
+      align-items: center;
+      padding: 20px;
+      padding-left: 50px;
+      padding-right: 30px;
+      padding-top: 50px;
+      background-color:#584b4f;;
+    }
+
+    nav{
+      flex: 1;
+      text-align: right;
+    }
+
+    nav ul{
+      display: inline-block;
+      list-style: none;
+    }
+
+    nav ul li{
+      display: inline-block;
+      margin-right: 70px;
+    }
+
+    nav ul li a{
+      text-decoration: none;
+      font-size: 20px;
+      color: white;
+    }
+
+  nav ul li button{
+    font-size: 20px;
+    color: white;
+    outline: none;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    display: inline-block;
+  }
+
+  nav ul li button:hover{
+    color: aqua;
+  }
+
+  nav ul li a:hover{
+    color: aqua;
+  }
+  hr.new4 {
+  border: 0.2px solid #eeeeee;
+  width: 96.5%;
+}
+
+  </style>
+
+<link rel="stylesheet" href="/css/home.css">
+<link rel="stylesheet" href="/css/footer.css">
+
+  <div class="abc">
+   
+    <!-- navigation bar started here -->
+    <nav class="navbar" style="padding-bottom: 0px; padding-top: 0px;  box-shadow: 0px 15px 15px 0px  #40ddd3" >
+      <ul class="MenuItems">
+
+        <li><h1 style="color:#ffdb00;">iCoder</h1></li>
+        <li><a href="/about">About Us</a></li>
+        <li><a href="/services">Services</a></li>
+        <li><a href="/contact">Contact us</a></li>
+        <li><button onclick="location.href = '/users/sign-in';">SignIn</button></li>
+        <li><button onclick="location.href = '/users/sign-up';">Create Your Account</button></li>
+
+      </ul>
+    </nav>
+    <img class="" src="/images/logo.png" style="width:600px;height:500px;border-radius:50%; display: block; margin-left: auto;margin-right: auto;
+      margin-top: 50px; box-shadow: 10px 10px 10px 10px  #ffdb00"/>
+
+    <!-- navigation bar ends here -->
+  <!-- body start here -->  
+  </div>
+  <hr class="new4" >
+  <div class="container " style="margin: 10px;">
+    <div class="row row-content align-items-center">
+      <div class="col-12 col-sm-4 order-sm-last col-md-3">
+        <img class="float-left" src="/images/bookImg1.jpg" style="width:400px;height:300px;border-radius:20px 0px 0px 20px;float: right; box-shadow: 10px 10px 10px 10px  #eb5f34"/>
+      </div>
+      <div class="col col-sm order-sm-first col-md">
+        <h1 style="font-family: &quot;Courier New&quot; ,&quot;Serif&quot;">Purpose</h1>
+        <p class="homePage_content">The purpose for building this site was so that all the bibliophiles in college can have easy access to all the books available with people in the college. </p>
+        <p class="homePage_content">Also students can share the course books among themselves without the fear of them getting lost.</p>
+      </div>
+    </div>
+    <div class="row row-content ">
+      <span class="col-12 col-sm-4 order-sm-last col-md-3"><img class="" src="/images/bookImg2.jpg" style="width:400px;height:300px;border-radius:0px 20px 20px 0px;margin-left:auto; box-shadow: 10px 10px 10px 10px  #34eb8c"/></span>
+      <span class="ccol col-sm order-sm-first col-md" style="float: right;">
+        <h1  style="font-family: &quot;Courier New&quot;,&quot;Serif&quot; ">Why Use This?</h1>
+        <ol class="homePage_content">
+          <li style="font-size:20px">Secure</li>
+          <li style="font-size:20px">Hassle Free</li>
+          <li style="font-size:20px">Comfortable</li>
+        </ol>
+       
+      </span>
+    </div>
+    
+    <div class="row row-content align-items-center">
+      <div class="col-12 col-sm-4 order-sm-last col-md-3"><img class="float-left" src="/images/bookImg3.jpg" style="width:400px;height:300px;border-radius:20px 0px 0px 20px;float: right;  box-shadow: 10px 10px 10px 10px  #9d3eb5"/></div>
+      <div class="col col-sm order-sm-first col-md">
+        <h1 style="font-family: &quot;Courier New&quot;,&quot;Serif&quot; ">About Us</h1>
+        <p class="homePage_content">We are the students of IIIT Pune. At the time of the making of the project we are in Semester 4 of our BTech. Degree.</p>
+        <p class="homePage_content">We made this project as part of our BTP evaluation for the 4th semester.</p>
+      </div>
+    </div>
+  </div>
+  <footer>
+    <div class="container">
+      <div class="row">
+
+        <div >
+          <span class="col-md-4">
+          <h3>Features</h3>
+          <ul class=" " >
+            <li>1. All book at a same place</li>
+            <br>
+            <li>2. Specially for iiit-p student</li>
+            <br>
+            <li>3. Easy to use</li>
+            <br>
+            
+          </ul>
+          </span>
+          <span class=" col-md">
+          <h3>Sources</h3>
+          <ul class= "" >
+            <li> GeeksforGeeks</li>
+            
+            <li>W3school</li>
+            
+            <li>getbootstrap.com/docs</li>
+            
+            <li>freecodecamp.org</li>
+            
+          </ul>
+          </span>
+          </div>
+
+      </div>
+    </div>
+   
+  </div>
+    <div class="copyright text-center" style="text-align: center;">
+     Garib Engineer</span>
+    </div>
+  </footer>
+  
+   <!-- body end here -->
+
+
+
+

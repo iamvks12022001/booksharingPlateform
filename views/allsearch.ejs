@@ -1,0 +1,128 @@
+<link rel="stylesheet" href="/css/workspace.css">
+<link rel="stylesheet" href="/css/footer.css">
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<div style="background-color:#584b4f ;">
+  <div class="card"style="background-color:#584b4f ; border :5px; padding:5px" >
+<h1 style="text-align: center; color: aliceblue;"> All Book List </h1>
+</div>
+
+     <!-- this is contact list -->
+
+
+   
+      
+  <button type="submit" onclick="window.location.href='./main' "class="btn btn-primary  m-2" style="cursor: pointer; width: 10%; border-color: #ffd152; color:#ffd152">back</button>
+              <div style="background-color: #353435;">
+             <% for(let i of books){%>           
+             <div class="row  align-items-center offset-md-3  p-3  pic">
+            <div class="col-md-5">
+                <div class="row">
+                    <div class="col-md-4">
+                        <img src="/images/openbook.png" class="img-fluid "
+                            alt="Responsive image">
+                    </div>
+                    <div class="col-md-8">
+                        <dl class="" style="color:#ffd152">
+                            <dt class="" style="color: white;">Book Name</dt>
+                            
+                            <dd class=" ">
+                                <%=i.bookname%>
+                            </dd>
+                            <dt class=""style="color: white;" >Owner Name</dt>
+                            <dd class=" ">
+                                
+                                <p>
+                                    <%=i.Ownername%>
+                                </p>
+                            </dd>
+                            <dt class="" style="color: white;">Price</dt>
+                            <dd class="">
+                                <p>
+                                    <%=i.price%>
+                                </p>
+                            </dd>
+                        </dl>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="row">
+                    <div class="col-md-4">
+                        <img src="/images/user2.jpg" style=" border-radius: 50%;"
+                            class="img-fluid" alt="Responsive image">
+                    </div>
+                    <div class="col-md-8">
+                        <dl class="" style="color:#ffd152">
+                            <dt class="" style="color: white;">About</dt>
+                            <dd class="">
+                                <%= i.about%>
+                            </dd>
+                            <dt class="" style="color: white;">Room No</dt>
+                            <dd class="">
+                                <p>
+                                    <%=i.roomNo%>
+                                </p>
+                            </dd>
+                            
+                        </dl>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md">
+                <div class="row">
+                    
+                    <button type="submit"onclick="window.location.href='/users/tranc/?id=<%= i._id%>' " class="btn btn-success btn-lg m-2"  style="cursor: pointer; width: 50%; border-color: #ffd152; color:#ffd152">Get</button>
+                    
+                </div>
+            </div>
+        </div>
+                             
+               <%}%>
+              </div>      
+      
+   
+<footer  style="margin: 0px;">
+  <div class="container">
+    <div class="row">
+
+      <div >
+        <span class="col-md-4">
+        <h3>Features</h3>
+        <ul  >
+          <li>1. All book at a same place</li>
+          <br>
+          <li>2. Specially for iiit-p student</li>
+          <br>
+          <li>3. Easy to use</li>
+          <br>
+          
+        </ul>
+        </span>
+        <span class=" col-md">
+        <h3>Sources</h3>
+        <ul class= "" >
+          <li> GeeksforGeeks</li>
+          
+          <li>W3school</li>
+          
+          <li>getbootstrap.com/docs</li>
+          
+          <li>freecodecamp.org</li>
+          
+        </ul>
+        </span>
+        </div>
+
+    </div>
+  </div>
+ 
+</div>
+  <div class="copyright text-center" style="text-align: center; background-color: #333333;color: aliceblue;">
+   Garib Engineer</span>
+  </div>
+</footer>

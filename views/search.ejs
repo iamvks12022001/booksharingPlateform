@@ -1,0 +1,276 @@
+<link rel="stylesheet" href="/css/workspace.css">
+<!-- Bootstrap CSS -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+
+<ul class="nav nav-pills pic1">
+    <li class="nav-item">
+        <a class="nav-link active " aria-current="page" href="./allsearch">All Search</a>
+    </li>
+
+    </div>
+    <button type="button" onclick="window.location.href='/users/profile/' " class="btn btn-success">Profile</button>
+    <button type="button" onclick="window.location.href='/users/add' " class="btn btn-danger">Add</button>
+
+</ul>
+
+<div class="pic ">
+    <div class="container card-body border">
+        <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+            <ol class="carousel-indicators">
+                <li data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"></li>
+                <li data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"></li>
+                <li data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"></li>
+                <li data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3"></li>
+                <li data-bs-target="#carouselExampleCaptions" data-bs-slide-to="4"></li>
+            </ol>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="/images/finalimage6.jpg" class="d-block w-100" alt="img">
+                    <div class="carousel-caption d-none d-md-block  font-weight-bold text-warning">
+                        <h5>“′Classic′ – a book which people praise and don’t read.”</h5>
+
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="/images/finalimage1.jpg" class="d-block w-100" alt="img">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>“Sleep is good, he said, and books are better.”</h5>
+
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="/images/finalimage2.jpg" class="d-block w-100" alt="img">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>“Many people, myself among them, feel better at the mere sight of a book.”</h5>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="/images/finalimage4.jpg" class="d-block w-100" alt="img">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>“The library is inhabited by spirits that come out of the pages at night.”
+                        </h5>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="/images/finalimage7.jpg" class="d-block w-100" alt="img">
+                    <div class="carousel-caption d-none d-md-block text-primary">
+                        <h5>“If you don’t like to read, you haven’t found the right book.”</h5>
+                    </div>
+                </div>
+            <div>
+            <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselExampleCaptions" role="button" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </a>
+        </div>
+    </div>
+    </div>
+</div>
+
+<nav class="navbar navbar-dark pic1  ">
+    <div class="container-fluid m-0 ">
+        <a class="navbar-brand-fluid h3 text-decoration-none dropdown " style="color:#ffd152  "><i>iCoder</i></a>
+
+        <div class="  d-flex dropdown row col-md-11 ">
+            <!-- <button class="btn btn-success col-md-1"   type="submit">Search</button> -->
+            <form action="/users/search" method="POST">
+                <input class=" col-md-12 p-1 " name="abc" type="text" style="border-radius: 20px 20px 20px 20px ;"
+                    placeholder="Search the book by name...">
+            </form>
+
+
+        </div>
+        
+ </nav>
+    
+
+
+  <div style="background-color: #353435;">
+             <% for(let i of books){%>           
+             <div class="row  align-items-center offset-md-3  p-3  pic">
+            <div class="col-md-5">
+                <div class="row">
+                    <div class="col-md-4">
+                        <img src="/images/openbook.png" class="img-fluid " alt="Responsive image">
+                    </div>
+                    <div class="col-md-8">
+                        <dl class="" style="color:#ffd152">
+                            <dt class="" style="color: white;">Book Name</dt>
+
+                            <dd class=" ">
+                                <%=i.bookname%>
+                            </dd>
+                            <dt class="" style="color: white;">Owner Name</dt>
+                            <dd class=" ">
+
+                                <p>
+                                    <%=i.Ownername%>
+                                </p>
+                            </dd>
+                            <dt class="" style="color: white;">Price</dt>
+                            <dd class="">
+                                <p>
+                                    <%=i.price%>
+                                </p>
+                            </dd>
+                        </dl>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="row">
+                    <div class="col-md-4">
+                        <img src="/images/user2.jpg" style=" border-radius: 50%;" class="img-fluid"
+                            alt="Responsive image">
+                    </div>
+                    <div class="col-md-8">
+                        <dl class="" style="color:#ffd152">
+                            <dt class="" style="color: white;">About</dt>
+                            <dd class="">
+                                <%= i.about%>
+                            </dd>
+                            <dt class="" style="color: white;">Room No</dt>
+                            <dd class="">
+                                <p>
+                                    <%=i.roomNo%>
+                                </p>
+                            </dd>
+
+                        </dl>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md">
+                <div class="row">
+
+                    <button type="submit" onclick="window.location.href='/users/tranc/?id=<%= i._id%>' "
+                        class="btn btn-success btn-lg m-2"
+                        style="cursor: pointer; width: 50%; border-color: #ffd152; color:#ffd152">Get</button>
+
+                </div>
+            </div>
+        </div>                 
+               <%}%>
+             </div>
+</div>
+<footer>
+    <div class="container">
+        <div class="row">
+
+            <div class="col-lg-4 col-md-6">
+                <h3>Features</h3>
+                <ul class="list-unstyled one-column ">
+                    <li>1. All book at a same place</li>
+                    <br>
+                    <li>2. Specially for iiit-p student</li>
+                    <br>
+                    <li>3. Easy to use</li>
+                    <br>
+
+                </ul>
+                <h3>Sources</h3>
+                <ul class="list-unstyled  ">
+                    <li> GeeksforGeeks</li>
+
+                    <li>W3school</li>
+
+                    <li>getbootstrap.com/docs</li>
+
+                    <li>freecodecamp.org</li>
+
+                </ul>
+            </div>
+
+            <div class="col-lg-4 col-md-6 ">
+                <h3>Project Details</h3>
+                <div class="media">
+                    <a href="https://github.com/iamvks12022001/mainpage.github.io/tree/master" target="_blank"
+                        class="pull-left">
+                        <img src="/images/github.png" alt="GitHub"
+                            class="media-object p-3 img-thumbnail rounded-circle" />
+                    </a>
+                    <div class="media-body">
+                        <h4 class="media-heading">GitHub</h4>
+                        <p>Our Project Source Code is Available here.</p>
+                    </div>
+                </div>
+                <br>
+                <br>
+                <div class="media">
+                    <a href="https://www.overleaf.com/read/kgvkpmgdjyvf" target="_blank" class="pull-left">
+                        <img src="/images/overleaf.png" alt="overLeaf"
+                            class="media-object p-3 img-thumbnail rounded-circle" />
+                    </a>
+                    <div class="media-body">
+                        <h4 class="media-heading">LaTeX</h4>
+                        <p>You Can Check the Documentation of Our Project here.</p>
+                    </div>
+                </div>
+                <br>
+                <br>
+                <div class="media">
+                    <a href="https://1drv.ms:443/p/s!BFe2RDy8FRuYjDcX1JeilwW6yZZP?e=hIvNVSrFO0aN5wwA9op8kg&at=9"
+                        target="_blank" class="pull-left">
+                        <img src="/images/ppt.jpg" alt="" class="media-object p-3 img-thumbnail rounded-circle " />
+                    </a>
+                    <div class="media-body">
+                        <h4 class="media-heading">PPT</h4>
+                        <p> Presentation of Our Group for Sem -IV BTP Project is here.</p>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="col-lg-4">
+                <h3>Our Team</h3>
+                <img class="img-thumbnail rounded-circle p-3" src="/images/vikash.jpg" alt="vikash" />
+                <img class="img-thumbnail rounded-circle p-3" src="/images/adarsh.jpg" alt="adarsh" />
+                <img class="img-thumbnail rounded-circle p-3" src="/images/himanshu.jpg" alt="himanshu" />
+                <img class="img-thumbnail rounded-circle p-3" src="/images/pratik.jpg" alt="pratik" />
+            </div>
+
+        </div>
+    </div>
+    <div class="copyright text-center">
+        Garib Engineer</span>
+    </div>
+</footer>
+<!-- <div class="bg-text"> -->
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
+    crossorigin="anonymous"></script>
+<!-- script for search -->
+<script>
+
+    function myFunction() {
+        document.getElementById("myDropdown").classList.toggle("show");
+    }
+
+    function filterFunction() {
+        var input, filter, ul, li, a, i;
+        input = document.getElementById("myInput");
+        filter = input.value.toUpperCase();
+        div = document.getElementById("myDropdown");
+        a = div.getElementsByTagName("a");
+        for (i = 0; i < a.length; i++) {
+            txtValue = a[i].textContent || a[i].innerText;
+            if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                a[i].style.display = "";
+            } else {
+                a[i].style.display = "none";
+            }
+        }
+    }
+</script>
+
+<!-- script for search -->

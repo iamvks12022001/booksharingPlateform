@@ -1,10 +1,55 @@
 <link rel="stylesheet" href="/css/user_profile.css">
-        <h1>Codeial / <%=title%></h1>
-       <p>Name:<%=user.name%> </p>
-       <p>Email:<%=user.email%> </p>
+        
+      
 
-       <ul>
-               <li>  <a href="/users/sign-out">Sign Out</a></li>
-   
-     </ul>
-                
+    
+ 
+  
+
+
+<!-- Navbar -->
+<div class="nav">
+  <div class="container">
+    <h1> PROFILE</h1>
+  </div>
+</div>
+
+<!-- Content -->
+<div class="content">
+
+  <!-- Profile Section -->
+  <div class="profile-section">
+    <div class="container">
+      <img src="/images/user1.png" class="profile-photo">
+      <p class="profile-name"><%=user.name%></p>
+      <p class="profile-detail">Student Of IIIT-P</p>
+     
+    </div>
+  </div>
+
+  <!-- Detail Section -->
+  <div class="detail-section">
+    <div class="container">
+
+      <div class="card">
+        <div class="container">
+          <div class="card-title">User Details</div>
+          <div class="card-body">
+                <p >Name : <%=user.name%> </p>
+                <p>Email : <%=user.email%> </p>
+
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  
+       <button type="submit" onclick="window.location.href='../main' "class="btn btn-primary  m-2"  style="border-radius: 20px 20px 20px 20px ; cursor: pointer; width: 10%;  padding: 10px; font-size: medium; margin:5px; background-color: rgb(4, 0, 255); border-color: #ffd152; color:#f0f0f7">back</button>
+       <button type="submit" onclick="window.location.href='../sign-out' "class="btn btn-danger  m-2"  style="border-radius: 20px 20px 20px 20px ; cursor: pointer; width: 10%;  padding: 10px; font-size: medium; margin:5px; background-color: rgb(211, 53, 13); border-color: #ffd152; color:#f0f0f7">Sign-Out</button>
+
+
+</div>
+
+

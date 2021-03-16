@@ -1,9 +1,15 @@
-<h1> sign in</h1>
-<form action="/users/create-session" method="POST">
-    
+<link rel="stylesheet" href="/css/sigin.css">
+<link href="https://fonts.googleapis.com/css?family=Coiny" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Libre+Baskerville" rel="stylesheet">
+
+
+<form class="container " action="/users/create-session" method="POST">
+    <h1>iCoder</h1>
     <input type="email" name="email"  placeholder="Email " required >
     <input type="password" name="password"  placeholder="Password " required >
     <input type="submit" value="Sign In">
+    <button type="submit" onclick="window.location.href='../' "class="btn btn-primary  m-2" style="border-radius: 20px 20px 20px 20px ; cursor: pointer; width: 20%; box-sizing: content-box; padding: 10px; font-size: medium; margin:10px; background-color: rgb(4, 0, 255); border-color: #ffd152; color:#f0f0f7">back</button>
+
 </form>
 
 <!-- //we are using post methd bcz we are sending data to server -->
